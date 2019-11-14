@@ -19,8 +19,7 @@ async function update(id, changes) {
 }
 
 function add(data) {
-  return db('members')
-    .insert(data);
+  return db('members').insert(data);
 }
 
 function remove(id) {
