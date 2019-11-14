@@ -1,15 +1,4 @@
-const express = require('express');
-
-const server = express();
-
-// plug middleware
-server.use(express.json());
-
-// catch-all endpoint
-server.get('*', handleDefault);
-function handleDefault(req, res) {
-  {res.json('hello from the node server testing challenge')}
-}
+const server = require('./api/server');
 
 // server listen
 server.listen(process.env.PORT || 6000, () => {
